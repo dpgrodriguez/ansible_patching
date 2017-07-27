@@ -1,0 +1,5 @@
+---
+# tasks file for patch
+- name: Install Apache
+  yum: name=httpd state=present
+

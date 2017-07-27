@@ -1,0 +1,4 @@
+---
+- hosts: ah_rhel7
+  roles:
+    - patch
