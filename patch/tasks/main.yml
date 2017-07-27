@@ -1,7 +1,7 @@
 ---
 #Pre-patch
 - name: Snapshot config
-  command: /sysadm/bin/chkhealth.ksh before
+  command: "/sysadm/bin/chkhealth.ksh before"
 
 - name: Backup /etc
   command: tar -czpf /var/tmp/etc.tgz /etc/
