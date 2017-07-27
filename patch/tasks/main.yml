@@ -4,12 +4,12 @@
   command: /sysadm/bin/chkhealth.ksh before
 
 - name: Backup /etc
-  command: {{ tar_z }} /var/tmp/etc.tgz /etc/
+  command: tar -czpf /var/tmp/etc.tgz /etc/
 
 - name: Backup grub
-  command: {{ tar_z }} /var/tmp/grub.tgz /boot/grub2
+  command: tar -czpf  /var/tmp/grub.tgz /boot/grub2
   #vars from `ansible -m setup`
   when: ansible_distribution_major_version = 7
-  command: {{ tar_z }} /var/tmp/grub.tgz /boot/grub
+  command: tar -czpf  /var/tmp/grub.tgz /boot/grub
   when: ansible_distribution_major_version = 6
   
